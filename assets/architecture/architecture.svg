@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1030" viewBox="0 0 1400 1030">
+<rect width="100%" height="100%" fill="white"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#555"/></marker></defs>
+<text x="45" y="56" font-family="DejaVu Sans,sans-serif" font-size="31" fill="#111">Self hosted NetBird control plane and home exit</text>
+<rect x="45" y="110" width="340" height="100" rx="10" fill="#F0F3F6" stroke="#7B8794" stroke-width="2"/>
+<text x="63" y="149" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#111">Remote phone or laptop</text>
+<text x="63" y="182" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#111">External Internet</text>
+<rect x="850" y="110" width="470" height="100" rx="10" fill="#F0F3F6" stroke="#7B8794" stroke-width="2"/>
+<text x="868" y="149" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#111">Cloudflare DNS only A record</text>
+<text x="868" y="182" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#111">DDNS updates VPN hostname only</text>
+<rect x="100" y="275" width="1220" height="435" rx="10" fill="#FAFAFA" stroke="#7B8794" stroke-width="2"/>
+<text x="125" y="326" font-family="DejaVu Sans,sans-serif" font-size="31" fill="#111">Home VPN host</text>
+<rect x="145" y="370" width="460" height="140" rx="10" fill="#F0F3F6" stroke="#7B8794" stroke-width="2"/>
+<text x="163" y="409" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#111">Docker control plane</text>
+<text x="163" y="442" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#111">Traefik and dashboard</text>
+<text x="163" y="475" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#111">NetBird combined server</text>
+<rect x="755" y="370" width="500" height="140" rx="10" fill="#F0F3F6" stroke="#7B8794" stroke-width="2"/>
+<text x="773" y="409" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#111">Host OS NetBird client</text>
+<text x="773" y="442" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#111">Routing peer and Internet exit</text>
+<text x="773" y="475" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#111">Separate from container services</text>
+<path d="M220,210 L70,210 L70,440" stroke="#555" stroke-width="3" fill="none"/>
+<path d="M70,440 L145,440" stroke="#555" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<text x="100" y="246" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#111">HTTPS TCP 443</text>
+<path d="M385,160 L1000,365" stroke="#555" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<text x="440" y="291" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#111">Encrypted peer tunnel</text>
+<text x="540" y="326" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#111">Direct or relay transport</text>
+<text x="150" y="574" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#111">Gateway publishes TCP 80 and 443 plus UDP 3478</text>
+<text x="150" y="614" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#111">Persistent server and TLS volumes   Ethernet   Local key based SSH</text>
+<path d="M850,130 L385,130" stroke="#555" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<text x="465" y="116" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#111">Remote DNS lookup</text>
+<rect x="120" y="810" width="400" height="105" rx="10" fill="#F0F3F6" stroke="#7B8794" stroke-width="2"/>
+<text x="138" y="849" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#111">Home LAN</text>
+<text x="138" y="882" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#111">Selected service access</text>
+<rect x="815" y="810" width="440" height="105" rx="10" fill="#F0F3F6" stroke="#7B8794" stroke-width="2"/>
+<text x="833" y="849" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#111">Home gateway and ISP</text>
+<text x="833" y="882" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#111">Internet egress</text>
+<path d="M900,510 L900,740 L345,740" stroke="#555" stroke-width="3" fill="none"/>
+<path d="M345,740 L345,805" stroke="#555" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<text x="490" y="777" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#111">Forwarded peer traffic</text>
+<path d="M1060,510 L1060,805" stroke="#555" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<text x="45" y="978" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#111">Phase 2 pending: travel clients behind Beryl router. Diagram contains no real network values.</text>
+</svg>

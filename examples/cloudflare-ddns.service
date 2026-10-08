@@ -1,0 +1,16 @@
+# EXAMPLE ONLY -- reconstructed unit.
+[Unit]
+Description=Update the VPN hostname A record
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+UMask=0077
+ExecStart=/usr/local/sbin/cloudflare-ddns.sh
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectHome=yes
+ProtectSystem=strict
+ReadWritePaths=/run/lock

@@ -1,0 +1,12 @@
+# EXAMPLE ONLY -- timing values are examples, not historical settings.
+[Unit]
+Description=Periodically check the VPN public IPv4
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+RandomizedDelaySec=30s
+Unit=cloudflare-ddns.service
+
+[Install]
+WantedBy=timers.target

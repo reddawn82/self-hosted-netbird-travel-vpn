@@ -1,0 +1,40 @@
+# EXAMPLE ONLY -- topology illustration, NOT a deployable configuration.
+# Replace placeholders and use the official generated Compose for your version.
+# Omitted: generated server authentication settings, dashboard.env, all
+# Traefik routers/h2c service labels, ACME resolver options and Docker discovery.
+# The deliberate invalid image tag prevents accidental startup.
+services:
+  netbird-server:
+    image: netbirdio/netbird-server:EXAMPLE-NOT-DEPLOYABLE
+    restart: unless-stopped
+    networks: [netbird]
+    ports:
+      - '3478:3478/udp'
+    command: ['--config', '/etc/netbird/config.yaml']
+    volumes:
+      - netbird-data:/var/lib/netbird
+      - ./config.yaml:/etc/netbird/config.yaml:ro
+  dashboard:
+    image: netbirdio/dashboard:EXAMPLE-NOT-DEPLOYABLE
+    restart: unless-stopped
+    networks: [netbird]
+    env_file: [./dashboard.env]
+    # No public dashboard backend port; actual HTTP routing is in Traefik.
+  traefik:
+    image: traefik:EXAMPLE-NOT-DEPLOYABLE
+    restart: unless-stopped
+    networks: [netbird]
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - traefik-certificates:/letsencrypt
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    # A Docker socket mount is security-sensitive, even when mounted read-only.
+    # Actual entrypoint, ACME and routing settings come from the installer.
+networks:
+  netbird:
+    driver: bridge
+volumes:
+  netbird-data:
+  traefik-certificates:

@@ -1,0 +1,53 @@
+# Live configuration and generated environment files
+config.yaml
+config.yml
+docker-compose.yml
+compose.yml
+cloudflare-ddns.conf
+dashboard.env
+proxy.env
+.env
+.env.*
+*.env
+*.env.*
+# Private keys, certificate state and credential-bearing data
+*.key
+*.pem
+*.p12
+*.pfx
+acme.json
+*secret*
+*token*
+*credential*
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+# Generated/client state and private records
+private/
+backup/
+backups/
+volumes/
+data/
+letsencrypt/
+netbird-client/
+default.json
+*.log
+# Archives can contain sensitive configuration
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+# Generated derivatives and local build artifacts
+*.docx
+*.pdf
+__pycache__/
+qa/
+.DS_Store
+Thumbs.db
+# Intentional sanitized examples are permitted
+!examples/*.example.conf
+!examples/*.example.sh
+!examples/*.example.yml

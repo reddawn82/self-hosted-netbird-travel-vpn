@@ -1,0 +1,14 @@
+# EXAMPLE ONLY -- reconstructed unit.
+[Unit]
+Description=Apply the reviewed host input firewall
+After=network-pre.target
+Before=network.target docker.service netbird.service
+Wants=network-pre.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/host-firewall.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
