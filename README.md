@@ -30,8 +30,8 @@ SSH is not publicly forwarded. Peer enrollment uses one-off or short-lived crede
 
 Local MFA was deferred because it appeared as beta in the deployed interface. Posture checks and managed DNS were also deferred. See the walkthrough for historical decisions and optional hardening.
 
-## Examples and website drafts
+## Configuration examples
 
-The [example guide](examples/README.md) distinguishes reconstructed scripts from illustrative configuration. The Compose example intentionally cannot launch and must not replace the version-matched installer output. The [Projects page draft](website/projects-page.md) and [Knowledge Base version](website/knowledge-base-article.md) are prepared for review; they have not been published to the website.
+[Configuration examples](examples/README.md) accompany the walkthrough, including DDNS automation, systemd units, and host firewall rules. Review the example guide for each file's purpose and limitations.
 
-Review [NOTICE.md](NOTICE.md) and select a license before public release. `.gitignore` is a safeguard, not a secret scanner. Inspect staged files before any future commit or push.
+The Compose example illustrates the architecture and deliberately cannot launch. Use the official NetBird installer for a deployment and follow the walkthrough's configuration and verification steps.
